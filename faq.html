@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find answers to common questions about Snack Sizzle deliveries, payments, and more in Johannesburg, South Africa.">
+    <meta name="keywords" content="FAQ, Snack Sizzle, Johannesburg snacks, delivery questions, payment info">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Snack Sizzle - FAQ</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+
+<style>
+    .footer { background-color: #16a34a; color: white; }
+    .footer a { color: #f8f7f6; }
+    .footer a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+        .top-bar { font-size: 0.75rem; }
+        .nav-menu { display: none; }
+        .section h2 { font-size: 1.5rem; }
+        .footer { padding: 1rem 0; }
+    }
+</style>
+</head>
+
+<body class="font-sans bg-green-600">
+    <!-- Top Bar -->
+    <div class="top-bar py-2 text-center md:text-left">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-2 md:mb-0"><span class="mr-2">Newsletter</span><a href="#" aria-label="Subscribe"><i class="fas fa-envelope"></i></a></div>
+            <div class="flex justify-center md:justify-end space-x-4"><a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://tiktok.com" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></div>
+            <div class="mt-2 md:mt-0 text-sm">Free delivery on orders over R50 in Johannesburg!</div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-green-700">Snack Sizzle</div>
+            <div class="flex items-center space-x-6">
+                <button class="md:hidden text-green-700" id="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <ul class="hidden md:flex space-x-6" id="nav-menu">
+                    <li><a href="index.html" class="text-gray-700 hover:text-green-700 text-lg">Home</a></li>
+                    <li><a href="products.html" class="text-gray-700 hover:text-green-700 text-lg">Products</a></li>
+                    <li><a href="about.html" class="text-gray-700 hover:text-green-700 text-lg">About</a></li>
+                    <li><a href="promotions.html" class="text-gray-700 hover:text-green-700 text-lg">Promotions</a></li>
+                    <li><a href="faq.html" class="text-gray-700 hover:text-green-700 text-lg">FAQ</a></li>
+                    <li><a href="blog.html" class="text-gray-700 hover:text-green-700 text-lg">Blogs</a></li>
+                    <li><a href="contact.html" class="text-gray-700 hover:text-green-700 text-lg">Contact</a></li>
+                </ul>
+                <div class="relative">
+                    <a href="cart.html" class="text-green-600 hover:text-green-900" aria-label="View shopping cart">
+                        <i class="fas fa-shopping-cart text-2xl"></i>
+                        <span id="cart-count" class="absolute -top-3 -right-3 bg-green-600 text-white text-sm rounded-full h-6 w-6 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="hidden md:hidden bg-white shadow" id="mobile-menu">
+            <ul class="flex flex-col space-y-4 px-4 py-4">
+                <li><a href="index.html" class="text-gray-700 hover:text-green-700 text-lg">Home</a></li>
+                <li><a href="products.html" class="text-gray-700 hover:text-green-700 text-lg">Products</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-green-700 text-lg">About</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-green-700 text-lg">Contact</a></li>
+                <li><a href="faq.html" class="text-gray-700 hover:text-green-700 text-lg">FAQ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- FAQ Section -->
+    <section class="bg-gray-200 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
+            <div class="max-w-2xl mx-auto space-y-4">
+                <details class="bg-white p-4 rounded-lg shadow-md">
+                    <summary class="text-lg font-semibold text-gray-700 cursor-pointer">What areas do you deliver to?</summary>
+                    <p class="text-gray-600 mt-2">We deliver across Johannesburg and surrounding areas. Check our delivery zones on the Contact page for specific details.</p>
+                </details>
+                <details class="bg-white p-4 rounded-lg shadow-md">
+                    <summary class="text-lg font-semibold text-gray-700 cursor-pointer">How long does delivery take?</summary>
+                    <p class="text-gray-600 mt-2">Delivery typically takes 1-2 business days within Johannesburg, depending on your location and order volume. You’ll receive a tracking link once your order ships.</p>
+                </details>
+                <details class="bg-white p-4 rounded-lg shadow-md">
+                    <summary class="text-lg font-semibold text-gray-700 cursor-pointer">What payment methods do you accept?</summary>
+                    <p class="text-gray-600 mt-2">We accept Visa, Mastercard, EFT, and mobile payments like SnapScan. All transactions are secure and processed through trusted gateways.</p>
+                </details>
+                <details class="bg-white p-4 rounded-lg shadow-md">
+                    <summary class="text-lg font-semibold text-gray-700 cursor-pointer">Can I return or exchange a product?</summary>
+                    <p class="text-gray-600 mt-2">Yes, if the product is unopened and within 7 days of delivery. Contact us via the Contact page with your order number for assistance.</p>
+                </details>
+                <details class="bg-white p-4 rounded-lg shadow-md">
+                    <summary class="text-lg font-semibold text-gray-700 cursor-pointer">Are your snacks fresh?</summary>
+                    <p class="text-gray-600 mt-2">Absolutely! We source our snacks, including Simba Chips and Lunchbar, from local suppliers and ensure fast turnover to guarantee freshness.</p>
+                </details>
+                <details class="bg-white p-4 rounded-lg shadow-md">
+                    <summary class="text-lg font-semibold text-gray-700 cursor-pointer">Do you offer bulk orders or discounts?</summary>
+                    <p class="text-gray-600 mt-2">Yes, we provide discounts for bulk orders. Reach out through the Contact page for a custom quote or check our Promotions page for current deals.</p>
+                </details>
+                <details class="bg-white p-4 rounded-lg shadow-md">
+                    <summary class="text-lg font-semibold text-gray-700 cursor-pointer">What should I do if my order is delayed or missing?</summary>
+                    <p class="text-gray-600 mt-2">Contact our support team via the Contact page with your order details, and we’ll resolve it promptly—usually within 24 hours.</p>
+                </details>
+                <details class="bg-white p-4 rounded-lg shadow-md">
+                    <summary class="text-lg font-semibold text-gray-700 cursor-pointer">How can I track my order?</summary>
+                    <p class="text-gray-600 mt-2">After dispatch, you’ll receive an email with a tracking link. Check your inbox (and spam folder) or log into your account on our site.</p>
+                </details>
+                <details class="bg-white p-4 rounded-lg shadow-md">
+                    <summary class="text-lg font-semibold text-gray-700 cursor-pointer">Are there minimum order requirements?</summary>
+                    <p class="text-gray-600 mt-2">No minimum order is required, but orders over R200 qualify for free delivery within Johannesburg—see the Promotions page for details.</p>
+                </details>
+                <details class="bg-white p-4 rounded-lg shadow-md">
+                    <summary class="text-lg font-semibold text-gray-700 cursor-pointer">How do I contact customer support?</summary>
+                    <p class="text-gray-600 mt-2">Use the Contact page to send us a message, or email us at support@snacksizzle.com. We aim to respond within 24 hours.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <section id="home" class="bg-green-600 text-white py-20">
+            <div class="container mx-auto px-4 py-6 text-center md:text-left">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Customer Care</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html">Privacy Policy</a></li>
+                            <li><a href="index.html">Returns</a></li>
+                            <li><a href="index.html">Terms of Use</a></li>
+                            <li><a href="index.html">Shipping Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="promotions.html">Promotions</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Newtown</h3>
+                        <p>Email: snacksizzle.co.za</p>
+                        <p>Phone: +27 84 053 1834</p>
+                        <p>Address: Corner of Miriam Makeba and Helen Joseph (formerly Newtown |, Helen Joseph St, Johannesburg</p>
+                    </div>
+                </div>
+                <div class="border-t border-gray-300 pt-4"><p class="text-sm">© 2025 Snack Sizzle. All rights reserved.</p></div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Floating Cart Button (Mobile) -->
+    <a href="cart.html" class="fixed bottom-4 right-4 bg-green-600 text-white p-4 rounded-full shadow-lg md:hidden" aria-label="View cart">
+        <i class="fas fa-shopping-cart text-xl"></i>
+        <span id="floating-cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+    </a>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="hidden fixed bottom-16 right-4 bg-green-600 text-white px-4 py-3 rounded-lg shadow-lg text-sm">Item added to cart!</div>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Load cart from localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+        document.getElementById('cart-count').textContent = cartCount;
+        document.getElementById('floating-cart-count').textContent = cartCount;
+
+        function addToCart(name, price) {
+            const itemIndex = cart.findIndex(item => item.name === name);
+            if (itemIndex > -1) {
+                cart[itemIndex].quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            cartCount++;
+            document.getElementById('cart-count').textContent = cartCount;
+            document.getElementById('floating-cart-count').textContent = cartCount;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            const toast = document.getElementById('toast');
+            toast.textContent = `${name} added to cart!`;
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 2000);
+        }
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Auto-close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+/* Custom styles to complement Tailwind */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+header nav a {
+    transition: color 0.3s ease;
+}
+
+section#products .grid div {
+    transition: transform 0.3s ease;
+}
+
+section#products .grid div:hover {
+    transform: translateY(-5px);
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer .fa-tiktok,
+footer .fa-instagram,
+footer .fa-facebook {
+    transition: color 0.3s ease;
+}
+
+header .fa-shopping-cart {
+    transition: color 0.3s ease;
+}
+
+header .fa-bars {
+    transition: color 0.3s ease;
+}
+
+#cart-count {
+    transition: background-color 0.3s ease;
+}
+
+table th, table td {
+    padding: 0.5rem;
+}
+
+.top-bar-green {
+    background-color: #16a34a;
+    color: yellow;
+    justify-content: flex-start;
+}

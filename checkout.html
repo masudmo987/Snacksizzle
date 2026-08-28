@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your purchase at Snack Sizzle in Johannesburg, South Africa.">
+    <meta name="keywords" content="checkout, Snack Sizzle, Johannesburg snacks, payment">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Snack Sizzle - Checkout</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+
+<style>
+    .footer { background-color: #16a34a; color: white; }
+    .footer a { color: #f8f7f6; }
+    .footer a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+        .top-bar { font-size: 0.75rem; }
+        .nav-menu { display: none; }
+        .section h2 { font-size: 1.5rem; }
+        .footer { padding: 1rem 0; }
+    }
+</style>
+</head>
+
+<body class="font-sans bg-green-600">
+    <!-- Top Bar -->
+    <div class="top-bar py-2 text-center md:text-left">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-2 md:mb-0"><span class="mr-2">Newsletter</span><a href="#" aria-label="Subscribe"><i class="fas fa-envelope"></i></a></div>
+            <div class="flex justify-center md:justify-end space-x-4"><a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://tiktok.com" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></div>
+            <div class="mt-2 md:mt-0 text-sm">Free delivery on orders over R50 in Johannesburg!</div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-green-700">Snack Sizzle</div>
+            <div class="flex items-center space-x-6">
+                <button class="md:hidden text-green-700" id="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <ul class="hidden md:flex space-x-6" id="nav-menu">
+                    <li><a href="index.html" class="text-gray-700 hover:text-green-700 text-lg">Home</a></li>
+                    <li><a href="products.html" class="text-gray-700 hover:text-green-700 text-lg">Products</a></li>
+                    <li><a href="about.html" class="text-gray-700 hover:text-green-700 text-lg">About Us</a></li>
+                    <li><a href="promotions.html" class="text-gray-700 hover:text-green-700 text-lg">Promotions</a></li>
+                    <li><a href="faq.html" class="text-gray-700 hover:text-green-700 text-lg">FAQ</a></li>
+                    <li><a href="blog.html" class="text-gray-700 hover:text-green-700 text-lg">Blogs</a></li>
+                    <li><a href="contact.html" class="text-gray-700 hover:text-green-700 text-lg">Contact</a></li>
+                </ul>
+                <div class="relative">
+                    <a href="cart.html" class="text-green-600 hover:text-green-900" aria-label="View shopping cart">
+                        <i class="fas fa-shopping-cart text-2xl"></i>
+                        <span id="cart-count" class="absolute -top-3 -right-3 bg-green-600 text-white text-sm rounded-full h-6 w-6 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="hidden md:hidden bg-white shadow" id="mobile-menu">
+            <ul class="flex flex-col space-y-4 px-4 py-4">
+                <li><a href="index.html" class="text-gray-700 hover:text-green-700 text-lg">Home</a></li>
+                <li><a href="products.html" class="text-gray-700 hover:text-green-700 text-lg">Products</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-green-700 text-lg">About</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-green-700 text-lg">Contact</a></li>
+                <li><a href="faq.html" class="text-gray-700 hover:text-green-700 text-lg">FAQ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="bg-gray-200 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Checkout</h2>
+            <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg space-y-6">
+                <div>
+                    <label class="block text-gray-700 mb-2" for="email">Email</label>
+                    <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="Enter your email" required>
+                    <p id="email-sent" class="text-green-600 hidden mt-2">Email sent to masudmohammed540@gmail.com!</p>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2" for="address">Delivery Address</label>
+                    <input type="text" id="address" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="Enter your address" required>
+                    <p id="delivery-fee" class="text-gray-700 mt-2">Delivery Fee: Calculating...</p>
+                </div>
+                <div id="cart-summary" class="space-y-4 mb-4">
+                    <h3 class="text-xl font-semibold">Order Summary</h3>
+                    <div id="cart-items-summary"></div>
+                    <p class="text-right text-lg font-bold">Subtotal: <span id="subtotal">R0.00</span></p>
+                    <p class="text-right text-lg font-bold">Delivery Fee: <span id="delivery-cost">R0.00</span></p>
+                    <p class="text-right text-xl font-bold">Total: <span id="total">R0.00</span></p>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2" for="card-number">Card Number</label>
+                    <input type="text" id="card-number" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="1234 5678 9012 3456" required>
+                    <p id="card-error" class="text-red-600 hidden mt-2">Invalid card number. Please try again.</p>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2" for="expiry-date">Expiry Date</label>
+                    <input type="text" id="expiry-date" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="MM/YY" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2" for="cvv">CVV</label>
+                    <input type="text" id="cvv" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="123" required>
+                </div>
+                <button id="pay-now" class="w-full bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700">Pay Now</button>
+                <p id="payment-success" class="text-green-600 text-center hidden mt-2">Payment successful! Thank you for your order.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <section id="home" class="bg-green-600 text-white py-20">
+            <div class="container mx-auto px-4 py-6 text-center md:text-left">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Customer Care</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html">Privacy Policy</a></li>
+                            <li><a href="index.html">Returns</a></li>
+                            <li><a href="index.html">Terms of Use</a></li>
+                            <li><a href="index.html">Shipping Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="promotions.html">Promotions</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Newtown</h3>
+                        <p>Email: snacksizzle.co.za</p>
+                        <p>Phone: +27 84 053 1834</p>
+                        <p>Address: Corner of Miriam Makeba and Helen Joseph (formerly Newtown |, Helen Joseph St, Johannesburg</p>
+                    </div>
+                </div>
+                <div class="border-t border-gray-300 pt-4"><p class="text-sm">© 2025 Snack Sizzle. All rights reserved.</p></div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Floating Cart Button (Mobile) -->
+    <a href="cart.html" class="fixed bottom-4 right-4 bg-green-600 text-white p-4 rounded-full shadow-lg md:hidden" aria-label="View cart">
+        <i class="fas fa-shopping-cart text-xl"></i>
+        <span id="floating-cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+        const cartCountSpan = document.getElementById('cart-count');
+        const floatingCartCountSpan = document.getElementById('floating-cart-count');
+        const cartItemsSummary = document.getElementById('cart-items-summary');
+        const subtotalSpan = document.getElementById('subtotal');
+        const deliveryCostSpan = document.getElementById('delivery-cost');
+        const totalSpan = document.getElementById('total');
+        const emailInput = document.getElementById('email');
+        const emailSent = document.getElementById('email-sent');
+        const addressInput = document.getElementById('address');
+        const deliveryFee = document.getElementById('delivery-fee');
+        const cardNumberInput = document.getElementById('card-number');
+        const cardError = document.getElementById('card-error');
+        const payNowBtn = document.getElementById('pay-now');
+        const paymentSuccess = document.getElementById('payment-success');
+
+        function updateCartDisplay() {
+            cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            cartCountSpan.textContent = cartCount;
+            floatingCartCountSpan.textContent = cartCount;
+
+            cartItemsSummary.innerHTML = cart.map(item => `
+                <p>${item.name} x${item.quantity} - R${(item.price * item.quantity).toFixed(2)}</p>
+            `).join('');
+            const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            subtotalSpan.textContent = `R${subtotal.toFixed(2)}`;
+            const deliveryCost = parseFloat(deliveryCostSpan.textContent.replace('R', '')) || 0;
+            totalSpan.textContent = `R${(subtotal + deliveryCost).toFixed(2)}`;
+        }
+
+        function calculateDeliveryFee(address) {
+            const storeLocation = { lat: -26.2024, lng: 28.0350 }; // Sci-Bono Discovery Centre coordinates
+            const userAddress = address || addressInput.value;
+            // Simple distance approximation (for demo, using a basic check; replace with real geolocation API in production)
+            const isWithin5km = true; // Replace with actual distance calculation
+            const fee = isWithin5km ? 100 : 200;
+            deliveryCostSpan.textContent = `R${fee}.00`;
+            deliveryFee.textContent = `Delivery Fee: R${fee}.00`;
+            updateCartDisplay();
+        }
+
+        emailInput.addEventListener('change', () => {
+            const email = emailInput.value;
+            if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailSent.classList.remove('hidden');
+                // Simulate email sending (replace with actual email API in production)
+                console.log(`Email sent to masudmohammed540@gmail.com with: ${email}`);
+            }
+        });
+
+        addressInput.addEventListener('input', () => {
+            calculateDeliveryFee();
+        });
+
+        cardNumberInput.addEventListener('input', () => {
+            cardError.classList.add('hidden');
+        });
+
+        payNowBtn.addEventListener('click', () => {
+            const cardNumber = cardNumberInput.value.replace(/\s/g, '');
+            if (!/^\d{16}$/.test(cardNumber)) {
+                cardError.classList.remove('hidden');
+                return;
+            }
+            paymentSuccess.classList.remove('hidden');
+            cart = [];
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartDisplay();
+            setTimeout(() => window.location.href = 'index.html', 2000);
+        });
+
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        updateCartDisplay();
+        calculateDeliveryFee(); // Initial calculation
+    </script>
+</body>
+</html>

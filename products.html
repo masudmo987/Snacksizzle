@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore a wide range of snacks like Simba Chips, Doritos, and Lunchbar at Snack Sizzle in Johannesburg, South Africa. Shop now!">
+    <meta name="keywords" content="snacks, Simba Chips, Doritos, Lunchbar, Johannesburg, South Africa, online snacks, products">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Snack Sizzle - Products</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+
+<style>
+    .footer { background-color: #16a34a; color: white; }
+    .footer a { color: #f8f7f6; }
+    .footer a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+        .top-bar { font-size: 0.75rem; }
+        .nav-menu { display: none; }
+        .section h2 { font-size: 1.5rem; }
+        .footer { padding: 1rem 0; }
+    }
+</style>
+</head>
+
+<body class="font-sans bg-green-600">
+    <!-- Top Bar -->
+    <div class="top-bar py-2 text-center md:text-left">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-2 md:mb-0"><span class="mr-2">Newsletter</span><a href="#" aria-label="Subscribe"><i class="fas fa-envelope"></i></a></div>
+            <div class="flex justify-center md:justify-end space-x-4"><a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://tiktok.com" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></div>
+            <div class="mt-2 md:mt-0 text-sm">Free delivery on orders over R50 in Johannesburg!</div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-green-700">Snack Sizzle</div>
+            <div class="flex items-center space-x-6">
+                <button class="md:hidden text-green-700" id="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <ul class="hidden md:flex space-x-6" id="nav-menu">
+                    <li><a href="index.html" class="text-gray-700 hover:text-green-700 text-lg">Home</a></li>
+                    <li><a href="products.html" class="text-gray-700 hover:text-green-700 text-lg">Products</a></li>
+                    <li><a href="about.html" class="text-gray-700 hover:text-green-700 text-lg">About</a></li>
+                    <li><a href="promotions.html" class="text-gray-700 hover:text-green-700 text-lg">Promotions</a></li>
+                    <li><a href="faq.html" class="text-gray-700 hover:text-green-700 text-lg">FAQ</a></li>
+                    <li><a href="blog.html" class="text-gray-700 hover:text-green-700 text-lg">Blogs</a></li>
+                    <li><a href="contact.html" class="text-gray-700 hover:text-green-700 text-lg">Contact</a></li>
+                </ul>
+                <div class="relative">
+                    <a href="cart.html" class="text-green-600 hover:text-green-900" aria-label="View shopping cart">
+                        <i class="fas fa-shopping-cart text-2xl"></i>
+                        <span id="cart-count" class="absolute -top-3 -right-3 bg-green-600 text-white text-sm rounded-full h-6 w-6 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="hidden md:hidden bg-white shadow" id="mobile-menu">
+            <ul class="flex flex-col space-y-4 px-4 py-4">
+                <li><a href="index.html" class="text-gray-700 hover:text-green-700 text-lg">Home</a></li>
+                <li><a href="products.html" class="text-gray-700 hover:text-green-700 text-lg">Products</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-green-700 text-lg">About</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-green-700 text-lg">Contact</a></li>
+                <li><a href="faq.html" class="text-gray-700 hover:text-green-700 text-lg">FAQ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section id="products" class="bg-gray-200 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">All Products</h2>
+
+            <!-- Search and Filter Controls -->
+            <div class="mb-8 flex flex-col md:flex-row gap-4">
+                <input type="text" id="searchInput" placeholder="Search products..." class="w-full md:w-1/3 p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600">
+                <select id="categoryFilter" class="w-full md:w-1/3 p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600">
+                    <option value="">All Categories</option>
+                    <option value="chips">Chips</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="noodles">Noodles</option>
+                    <option value="candy">Candy</option>
+                </select>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/simbabbq.png" alt="Simba Barbeque Chips" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Simba Barbeque Chips</h3>
+                    <p class="text-gray-600 mb-4">Roar with flavor! Simba Chips deliver a bold, crunchy taste.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Simba Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Simba Chips to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="noodles">
+                    <img src="images/golf noodles.png" alt="Durban Curry Noodles" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Durban Curry Noodles</h3>
+                    <p class="text-gray-600 mb-4">Spicy instant noodles for a quick, tasty meal.</p>
+                    <p class="text-green-700 font-bold mb-4">R7.99</p>
+                    <button onclick="addToCart('Instant Noodles', 7.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Instant Noodles to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="noodles">
+                    <img src="images/vegetablenoodles.webp" alt="Durban Curry Noodles" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Vegetable Noodles</h3>
+                    <p class="text-gray-600 mb-4">Spicy instant noodles for a quick, tasty meal.</p>
+                    <p class="text-green-700 font-bold mb-4">R7.99</p>
+                    <button onclick="addToCart('Instant Noodles', 7.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Instant Noodles to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="noodles">
+                    <img src="images/steakchopsnoodles.webp" alt="Durban Curry Noodles" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Steak Chops Noodles</h3>
+                    <p class="text-gray-600 mb-4">Spicy instant noodles for a quick, tasty meal.</p>
+                    <p class="text-green-700 font-bold mb-4">R7.99</p>
+                    <button onclick="addToCart('Instant Noodles', 7.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Instant Noodles to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="noodles">
+                    <img src="images/noodleslamband chops.webp" alt="Durban Curry Noodles" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Lamb and Chops Noodles</h3>
+                    <p class="text-gray-600 mb-4">Spicy instant noodles for a quick, tasty meal.</p>
+                    <p class="text-green-700 font-bold mb-4">R7.99</p>
+                    <button onclick="addToCart('Instant Noodles', 7.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Instant Noodles to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="noodles">
+                    <img src="images/golfbeef.webp" alt=" Beef Noodles" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Durban Curry Noodle</h3>
+                    <p class="text-gray-600 mb-4">Spicy instant noodles for a quick, tasty meal.</p>
+                    <p class="text-green-700 font-bold mb-4">R7.99</p>
+                    <button onclick="addToCart('Instant Noodles', 7.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Instant Noodles to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="candy">
+                    <img src="images/sourworms packet.jpg" alt="Sour Worms Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Sour Worms</h3>
+                    <p class="text-gray-600 mb-4">Tangy and chewy sour worms for a fun treat.</p>
+                    <p class="text-green-700 font-bold mb-4">R129.99</p>
+                    <button onclick="addToCart('Sour Worms', 129.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Sour Worms to cart">Add to Cart</button>
+                </div>
+                
+                           <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/doritos cheese supreme.webp" alt="Doritos Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Cheese Supreme Doritos </h3>
+                    <p class="text-gray-600 mb-4">Bold, zesty, and irresistibly crunchy Doritos.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Doritos', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Doritos to cart">Add to Cart</button>
+                </div>
+                           <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/doritos grilled bbq.webp" alt="Doritos Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">BBQ Doritos</h3>
+                    <p class="text-gray-600 mb-4">Bold, zesty, and irresistibly crunchy Doritos.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Doritos', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Doritos to cart">Add to Cart</button>
+                </div>
+                           <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/doritossweetchilli.jpg" alt="Doritos Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Sweet Chilli Doritos</h3>
+                    <p class="text-gray-600 mb-4">Bold, zesty, and irresistibly crunchy Doritos.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Doritos', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Doritos to cart">Add to Cart</button>
+                </div>
+                              <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/doritos sour cream.webp" alt="Doritos Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Sour Cream Doritos</h3>
+                    <p class="text-gray-600 mb-4">Bold, zesty, and irresistibly crunchy Doritos.</p>
+                    <p class="text-green-700 font-bold mb-4">R9.99</p>
+                    <button onclick="addToCart('Doritos', 9.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Doritos to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/doritosflaminhot.jpg" alt="Doritos Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Flamin Hot Doritos</h3>
+                    <p class="text-gray-600 mb-4">Bold, zesty, and irresistibly crunchy Doritos.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Doritos', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Doritos to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="noodles">
+                    <img src="images/golfbeef.webp" alt="Durban Curry Noodles" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Beef Noodles</h3>
+                    <p class="text-gray-600 mb-4">Spicy instant noodles for a quick, tasty meal.</p>
+                    <p class="text-green-700 font-bold mb-4">R7.99</p>
+                    <button onclick="addToCart('Instant Noodles', 7.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Instant Noodles to cart">Add to Cart</button>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/simbatomato.webp" alt="Simba Barbeque Chips" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Simba Tomato Chips</h3>
+                    <p class="text-gray-600 mb-4">Roar with flavor! Simba Chips deliver a bold, crunchy taste.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Simba Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Simba Chips to cart">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/simbabiltong.webp" alt="Simba Barbeque Chips" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Simba Biltong</h3>
+                    <p class="text-gray-600 mb-4">Roar with flavor! Simba Chips deliver a bold, crunchy taste.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Simba Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Simba Chips to cart">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/simbacheeseandonion.webp" alt="Simba Barbeque Chips" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Simba Cheese and Onion</h3>
+                    <p class="text-gray-600 mb-4">Roar with flavor! Simba Chips deliver a bold, crunchy taste.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Simba Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Simba Chips to cart">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/simbafruitchutney.webp" alt="Simba Barbeque Chips" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Simba Fruit Chutney</h3>
+                    <p class="text-gray-600 mb-4">Roar with flavor! Simba Chips deliver a bold, crunchy taste.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Simba Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Simba Chips to cart">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/simbakfc.jpg" alt="Simba Barbeque Chips" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Simba KFC</h3>
+                    <p class="text-gray-600 mb-4">Roar with flavor! Simba Chips deliver a bold, crunchy taste.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Simba Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Simba Chips to cart">Add to Cart</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/simbasweetchilli.webp" alt="Simba Barbeque Chips" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Simba Sweet Chilli</h3>
+                    <p class="text-gray-600 mb-4">Roar with flavor! Simba Chips deliver a bold, crunchy taste.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Simba Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Simba Chips to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chocolate">
+                    <img src="images/bar one.webp" alt="Bar One Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Bar One Chocolate</h3>
+                    <p class="text-gray-600 mb-4">Rich milk chocolate with nougat and caramel.</p>
+                    <p class="text-green-700 font-bold mb-4">R14.99</p>
+                    <button onclick="addToCart('Bar One', 14.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Bar One to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/laysargentinian.jpg" alt="Lays Chips Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Argentinian Creamy Pepper Steak Lays</h3>
+                    <p class="text-gray-600 mb-4">Crispy and spicy, perfect for snack lovers.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Lays Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lays Chips to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/laysbbq.jpg" alt="Lays Chips Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">American BBQ Lays</h3>
+                    <p class="text-gray-600 mb-4">Crispy and spicy, perfect for snack lovers.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Lays Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lays Chips to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/laysonionandvinegar.jpg" alt="Lays Chips Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Caribbean Onion and Vinegar Lays</h3>
+                    <p class="text-gray-600 mb-4">Crispy and spicy, perfect for snack lovers.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Lays Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lays Chips to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/layssalted.jpg" alt="Lays Chips Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Salted Lays</h3>
+                    <p class="text-gray-600 mb-4">Crispy and spicy, perfect for snack lovers.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Lays Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lays Chips to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/layssprignonion.jpg" alt="Lays Chips Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Spring Onion Lays</h3>
+                    <p class="text-gray-600 mb-4">Crispy and spicy, perfect for snack lovers.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Lays Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lays Chips to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chips">
+                    <img src="images/layssweetchili.jpg" alt="Lays Chips Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Sweet Chilli Lays</h3>
+                    <p class="text-gray-600 mb-4">Crispy and spicy, perfect for snack lovers.</p>
+                    <p class="text-green-700 font-bold mb-4">R20.99</p>
+                    <button onclick="addToCart('Lays Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lays Chips to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="candy">
+                    <img src="images/packet of jelly gums.jpg" alt="Fruit Gummies Pack" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Fruit Gummies</h3>
+                    <p class="text-gray-600 mb-4">Juicy, fruity gummies bursting with flavor.</p>
+                    <p class="text-green-700 font-bold mb-4">R129.99</p>
+                    <button onclick="addToCart('Fruit Gummies', 129.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Fruit Gummies to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chocolate">
+                    <img src="images/lunchbar.webp" alt="Lunchbar Chocolate Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Original Lunchbar Chocolate</h3>
+                    <p class="text-gray-600 mb-4">Creamy chocolate with a crunchy biscuit core.</p>
+                    <p class="text-green-700 font-bold mb-4">R14.99</p>
+                    <button onclick="addToCart('Lunchbar Chocolate', 14.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lunchbar Chocolate to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chocolate">
+                    <img src="images/astros20bucs.webp" alt="Lunchbar Chocolate Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Astros</h3>
+                    <p class="text-gray-600 mb-4">Creamy chocolate with a crunchy biscuit core.</p>
+                    <p class="text-green-700 font-bold mb-4">R23.99</p>
+                    <button onclick="addToCart('Lunchbar Chocolate', 23.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lunchbar Chocolate to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chocolate">
+                    <img src="images/crunchie chocolate 18.webp" alt="Lunchbar Chocolate Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Crunchie Chocolate</h3>
+                    <p class="text-gray-600 mb-4">Creamy chocolate with a crunchy biscuit core.</p>
+                    <p class="text-green-700 font-bold mb-4">R17.99</p>
+                    <button onclick="addToCart('Lunchbar Chocolate', 17.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lunchbar Chocolate to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chocolate">
+                    <img src="images/kitkatchocolate.webp" alt="Lunchbar Chocolate Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">KitKat Chocolate</h3>
+                    <p class="text-gray-600 mb-4">Creamy chocolate with a crunchy biscuit core.</p>
+                    <p class="text-green-700 font-bold mb-4">R14.99</p>
+                    <button onclick="addToCart('Lunchbar Chocolate', 14.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lunchbar Chocolate to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chocolate">
+                    <img src="images/smarties.webp" alt="Lunchbar Chocolate Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Smarties</h3>
+                    <p class="text-gray-600 mb-4">Creamy chocolate with a crunchy biscuit core.</p>
+                    <p class="text-green-700 font-bold mb-4">R14.99</p>
+                    <button onclick="addToCart('Lunchbar Chocolate', 14.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lunchbar Chocolate to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chocolate">
+                    <img src="images/texchocolate.webp" alt="Lunchbar Chocolate Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Tex Chocolate</h3>
+                    <p class="text-gray-600 mb-4">Creamy chocolate with a crunchy biscuit core.</p>
+                    <p class="text-green-700 font-bold mb-4">R14.99</p>
+                    <button onclick="addToCart('Lunchbar Chocolate', 14.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lunchbar Chocolate to cart">Add to Cart</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-4 text-center product-item" data-category="chocolate">
+                    <img src="images/lunchbardream.webp" alt="Lunchbar Chocolate Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
+                    <h3 class="text-lg font-semibold">Dream Lunchbar Chocolate</h3>
+                    <p class="text-gray-600 mb-4">Creamy chocolate with a crunchy biscuit core.</p>
+                    <p class="text-green-700 font-bold mb-4">R14.99</p>
+                    <button onclick="addToCart('Lunchbar Chocolate', 14.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lunchbar Chocolate to cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+          <section id="home" class="bg-green-600 text-white py-20">
+        <div class="container mx-auto px-4 py-6 text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Customer Care</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html">Privacy Policy</a></li>
+                        <li><a href="index.html">Returns</a></li>
+                        <li><a href="index.html">Terms of Use</a></li>
+                        <li><a href="index.html">Shipping Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Newtown</h3>
+                    <p>Email: snacksizzle.co.za</p>
+                    <p>Phone: +27 84 053 1834</p>
+                    <p>Address: Corner of Miriam Makeba and Helen Joseph (formerly Newtown |, Helen Joseph St, Johannesburg</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-300 pt-4"><p class="text-sm">© 2025 Snack Sizzle. All rights reserved.</p></div>
+       </section>
+        </div>
+    </footer>
+
+    <!-- Floating Cart Button (Mobile) -->
+    <a href="cart.html" class="fixed bottom-4 right-4 bg-green-600 text-white p-4 rounded-full shadow-lg md:hidden" aria-label="View cart">
+        <i class="fas fa-shopping-cart text-xl"></i>
+        <span id="floating-cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+    </a>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="hidden fixed bottom-16 right-4 bg-green-600 text-white px-4 py-3 rounded-lg shadow-lg text-sm">Item added to cart!</div>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Load cart from localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+        document.getElementById('cart-count').textContent = cartCount;
+        document.getElementById('floating-cart-count').textContent = cartCount;
+
+        function addToCart(name, price) {
+            const itemIndex = cart.findIndex(item => item.name === name);
+            if (itemIndex > -1) {
+                cart[itemIndex].quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            cartCount++;
+            document.getElementById('cart-count').textContent = cartCount;
+            document.getElementById('floating-cart-count').textContent = cartCount;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            const toast = document.getElementById('toast');
+            toast.textContent = `${name} added to cart!`;
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 2000);
+        }
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Auto-close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Search and Filter Functionality
+        const searchInput = document.getElementById('searchInput');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const productItems = document.querySelectorAll('.product-item');
+
+        function filterProducts() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const category = categoryFilter.value;
+
+            productItems.forEach(item => {
+                const name = item.querySelector('h3').textContent.toLowerCase();
+                const itemCategory = item.getAttribute('data-category');
+                const matchesSearch = name.includes(searchTerm);
+                const matchesCategory = !category || itemCategory === category;
+
+                if (matchesSearch && matchesCategory) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        searchInput.addEventListener('input', filterProducts);
+        categoryFilter.addEventListener('change', filterProducts);
+    </script>
+</body>
+</html>
