@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Snack Sizzle offers delicious snacks like Simba Chips, Doritos, and Lunchbar in Johannesburg, South Africa. Shop now for fast delivery!">
-    <meta name="keywords" content="snacks, Simba Chips, Doritos, Lunchbar, Johannesburg, South Africa, online snacks">
+    <meta name="description" content="Learn about Snack Sizzle, your go-to snack provider in Johannesburg, South Africa.">
+    <meta name="keywords" content="about Snack Sizzle, snack history, Johannesburg snacks">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Snack Sizzle - Delicious Treats</title>
+    <title>Snack Sizzle - About</title>
     <link rel="icon" href="images/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,25 +15,27 @@
 
 <style>
     .footer { background-color: #16a34a; color: white; }
-        .footer a { color: #f8f7f6; }
-        .footer a:hover { text-decoration: underline; }
-        @media (max-width: 768px) {
-            .top-bar { font-size: 0.75rem; }
-            .nav-menu { display: none; }
-            .section h2 { font-size: 1.5rem; }
-            .footer { padding: 1rem 0; }
-        }
-    </style>
+    .footer a { color: #f8f7f6; }
+    .footer a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+        .top-bar { font-size: 0.75rem; }
+        .nav-menu { display: none; }
+        .section h2 { font-size: 1.5rem; }
+        .footer { padding: 1rem 0; }
+    }
+</style>
 </head>
 
 <body class="font-sans bg-green-600">
+    <!-- Top Bar -->
     <div class="top-bar py-2 text-center md:text-left">
-    
         <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-2 md:mb-0"><span class="mr-2">Newsletter</span><a href="#" aria-label="Subscribe"><i class="fas fa-envelope"></i></a></div>
-            <div class="flex justify-center md:justify-end space-x-4"><i class="fab fa-facebook-f"></i></a><i class="fab fa-instagram"></i></a><i class="fab fa-tiktok"></i></a></div>
+            <div class="flex justify-center md:justify-end space-x-4"><a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://tiktok.com" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></div>
             <div class="mt-2 md:mt-0 text-sm">Free delivery on orders over R50 in Johannesburg!</div>
         </div>
+    </div>
+
     <!-- Header Section -->
     <header class="bg-white shadow sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -46,21 +48,19 @@
                     <li><a href="index.html" class="text-gray-700 hover:text-green-700 text-lg">Home</a></li>
                     <li><a href="products.html" class="text-gray-700 hover:text-green-700 text-lg">Products</a></li>
                     <li><a href="about.html" class="text-gray-700 hover:text-green-700 text-lg">About</a></li>
-                     <li><a href="promotions.html" class="text-gray-700 hover:text-green-700 text-lg">Promotions</a></li>
+                    <li><a href="promotions.html" class="text-gray-700 hover:text-green-700 text-lg">Promotions</a></li>
                     <li><a href="faq.html" class="text-gray-700 hover:text-green-700 text-lg">FAQ</a></li>
                     <li><a href="blog.html" class="text-gray-700 hover:text-green-700 text-lg">Blogs</a></li>
-                     <li><a href="contact.html" class="text-gray-700 hover:text-green-700 text-lg">Contact</a></li>
-                    
+                    <li><a href="contact.html" class="text-gray-700 hover:text-green-700 text-lg">Contact</a></li>
                 </ul>
                 <div class="relative">
-                    <a href="cart.html" class="text-green-700 hover:text-green-900" aria-label="View shopping cart">
+                    <a href="cart.html" class="text-green-600 hover:text-green-900" aria-label="View shopping cart">
                         <i class="fas fa-shopping-cart text-2xl"></i>
                         <span id="cart-count" class="absolute -top-3 -right-3 bg-green-600 text-white text-sm rounded-full h-6 w-6 flex items-center justify-center">0</span>
                     </a>
                 </div>
             </div>
         </nav>
-        <!-- Mobile Menu -->
         <div class="hidden md:hidden bg-white shadow" id="mobile-menu">
             <ul class="flex flex-col space-y-4 px-4 py-4">
                 <li><a href="index.html" class="text-gray-700 hover:text-green-700 text-lg">Home</a></li>
@@ -72,177 +72,57 @@
         </div>
     </header>
 
-    <!-- Hero Section (Customer Favorites) -->
-    <section id="home" class="bg-green-600 text-white py-20">
-        <div class="container mx-auto px-4">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12">Customer Favorites</h1>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="bg-white text-gray-800 rounded-lg shadow-lg p-4 text-center">
-                            <img src="images/simbabbq.png" alt="Simba Barbeque CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
-                            <h3 class="text-lg font-semibold">Simba Barbeque Chips</h3>
-                            <p class="text-green-700 font-bold mb-4">R9.99</p>
-                            <button onclick="addToCart('Simba Barbeque Chips', 9.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Simba Chips to cart">Add to Cart</button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white text-gray-800 rounded-lg shadow-lg p-4 text-center">
-                            <img src="images/golf noodles.png" alt="Instant Noodles Pack" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
-                            <h3 class="text-lg font-semibold">Durban Curry Noodles</h3>
-                            <p class="text-green-700 font-bold mb-4">R7.99</p>
-                            <button onclick="addToCart('Durban Noodles', 7.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Instant Noodles to cart">Add to Cart</button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white text-gray-800 rounded-lg shadow-lg p-4 text-center">
-                            <img src="images/sourworms packet.jpg" alt="Sour Worms Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
-                            <h3 class="text-lg font-semibold">Sour Worms</h3>
-                            <p class="text-green-700 font-bold mb-4">R129.99</p>
-                            <button onclick="addToCart('Sour Worms', 129.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Sour Worms to cart">Add to Cart</button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white text-gray-800 rounded-lg shadow-lg p-4 text-center">
-                            <img src="images/lunchbar.webp" alt="Lunchbar Chocolate" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
-                            <h3 class="text-lg font-semibold"> Original Lunchbar</h3>
-                            <p class="text-green-700 font-bold mb-4">R14.99</p>
-                            <button onclick="addToCart('Original Lunchbar Chocolate', 13.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lunchbar Chocolate to cart">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="bg-gray-200 py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Featured Products</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" id="product-grid">
-                <div class="bg-white rounded-lg shadow-lg p-4 text-center">
-                    <img src="images/simbatomato.webp" alt="Simba Tomato Chips" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
-                    <h3 class="text-lg font-semibold">Simba Chips</h3>
-                    <p class="text-gray-600 mb-4">Roar with flavor! Simba Chips deliver a bold, crunchy taste in every bite.</p>
-                    <p class="text-green-700 font-bold mb-4">R20.99</p>
-                    <button onclick="addToCart('Simba Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Simba Chips to cart">Add to Cart</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-4 text-center">
-                    <img src="images/golfbeef.webp" alt="Beef Noodles" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
-                    <h3 class="text-lg font-semibold">Beef Noodles</h3>
-                    <p class="text-gray-600 mb-4">Spicy instant noodles for a quick, tasty meal.</p>
-                    <p class="text-green-700 font-bold mb-4">R7.99</p>
-                    <button onclick="addToCart('Beef Noodles', 7.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Instant Noodles to cart">Add to Cart</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-4 text-center">
-                    <img src="images/sourworms packet.jpg" alt="Sour Worms Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
-                    <h3 class="text-lg font-semibold">Sour Worms</h3>
-                    <p class="text-gray-600 mb-4">Tangy and chewy sour worms for a fun treat.</p>
-                    <p class="text-green-700 font-bold mb-4">R129.99</p>
-                    <button onclick="addToCart('Sour Worms', 129.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Sour Worms to cart">Add to Cart</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-4 text-center">
-                    <img src="images/doritosflaminhot.jpg" alt="Flamin Hot Doritos" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
-                    <h3 class="text-lg font-semibold">Nacho Cheese Doritos</h3>
-                    <p class="text-gray-600 mb-4">Bold, zesty, and irresistibly crunchy, Doritos pack a flavor punch!</p>
-                    <p class="text-green-700 font-bold mb-4">R20.99</p>
-                    <button onclick="addToCart('Nacho Cheese Doritos', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Doritos to cart">Add to Cart</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-4 text-center">
-                    <img src="images/bar one.webp" alt="Bar One Chocolate" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
-                    <h3 class="text-lg font-semibold">Bar One Chocolate</h3>
-                    <p class="text-gray-600 mb-4">Rich and creamy milk chocolate with a nougat and caramel center.</p>
-                    <p class="text-green-700 font-bold mb-4">R14.99</p>
-                    <button onclick="addToCart('Bar One Chocolate', 14.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Bar One to cart">Add to Cart</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-4 text-center">
-                    <img src="images/layssalted.jpg" alt="Lays Chips Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
-                    <h3 class="text-lg font-semibold">Salted Lays</h3>
-                    <p class="text-gray-600 mb-4">Crispy and spicy, perfect for snack lovers.</p>
-                    <p class="text-green-700 font-bold mb-4">R20.99</p>
-                    <button onclick="addToCart('Classic Lays Chips', 20.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lays Chips to cart">Add to Cart</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-4 text-center">
-                    <img src="images/packet of jelly gums.jpg" alt="Fruit Gummies Pack" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
-                    <h3 class="text-lg font-semibold">Fruit Gummies</h3>
-                    <p class="text-gray-600 mb-4">Juicy, fruity gummies bursting with flavor.</p>
-                    <p class="text-green-700 font-bold mb-4">R129.99</p>
-                    <button onclick="addToCart('Fruit Gummies', 129.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Fruit Gummies to cart">Add to Cart</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-4 text-center">
-                    <img src="images/lunchbardream.webp" alt="Lunchbar Chocolate Packet" class="w-full h-32 sm:h-48 object-cover rounded mb-4" loading="lazy">
-                    <h3 class="text-lg font-semibold">Dream Lunchbar </h3>
-                    <p class="text-gray-600 mb-4">Creamy chocolate with a crunchy biscuit core, perfect for a quick indulgence.</p>
-                    <p class="text-green-700 font-bold mb-4">R14.99</p>
-                    <button onclick="addToCart('Dream Lunchbar Chocolate', 14.99)" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 text-lg" aria-label="Add Lunchbar Chocolate to cart">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- About Section -->
-    <section id="about" class="bg-gray-200 py-16">
+    <section class="bg-gray-200 py-16">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">About Snack Sizzle</h2>
-            <p class="text-lg text-gray-700 max-w-2xl mx-auto">At Snack Sizzle, we’re passionate about creating snacks that bring joy to every bite. Our products are crafted with quality ingredients to ensure maximum flavor and satisfaction.</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="bg-gray-200 py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-            <p class="text-lg text-gray-700 mb-6">Have questions or want to place a bulk order? Reach out to us!</p>
-            <a href="mailto:info@snacksizzle.com" class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700">Contact Us</a>
+            <h2 class="text-3xl font-bold mb-6">About Us</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">Snack Sizzle was born from a love for the irresistible flavors of South African snacks, right here in Johannesburg. What began as a passion for sharing local favorites like Simba Chips and Lunchbar has grown into a fast-delivery e-commerce haven for snack lovers.</p>
+            <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">Our mission is to bring joy with every bite, delivering fresh, tasty treats to your door with speed and care. We value quality, community, and making snack time accessible to everyone, no matter the occasion.</p>
+            <h2 class="text-3xl font-bold mb-6">Team or Founder Insight</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">Founded by a team of snack enthusiasts, we’re dedicated to curating the best selection, from classic chips to unique sweets, ensuring every order feels like a celebration.</p>
+            <h2 class="text-3xl font-bold mb-6">What Sets Us Apart</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">With a focus on fast delivery across Johannesburg and a hand-picked range of local delights, Snack Sizzle is your go-to for a quick, fun snack fix.</p>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto font-bold mb-8">Join our growing community of snack lovers. Shop now and discover your next favorite treat!</p>
         </div>
     </section>
 
     <!-- Footer Section -->
-     
-    
-     <footer class="footer">
+    <footer class="footer">
         <section id="home" class="bg-green-600 text-white py-20">
-        
-        <div class="container mx-auto px-4 py-6 text-center md:text-left">
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Customer Care</h3>
-                    <ul class="space-y-2">
-                    <li><a href="index.html">Privacy Policy</a></li>
-                    <li><a href="index.html">Returns</a></li>
-                    <li><a href="index.html">Terms of Use</a></li>
-                    <li><a href="index.html">Shipping Policy</a></li>
-                    </ul>
-                    
+            <div class="container mx-auto px-4 py-6 text-center md:text-left">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Customer Care</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html">Privacy Policy</a></li>
+                            <li><a href="index.html">Returns</a></li>
+                            <li><a href="index.html">Terms of Use</a></li>
+                            <li><a href="index.html">Shipping Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="promotions.html">Promotions</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Newtown</h3>
+                        <p>Email: snacksizzle.co.za</p>
+                        <p>Phone: +27 84 053 1834</p>
+                        <p>Address: Corner of Miriam Makeba and Helen Joseph (formerly Newtown |, Helen Joseph St, Johannesburg</p>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</li>
-                        <li><a href="promotions.html">Promotions</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="blogs.html">Blogs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        
-                        
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Newtown</h3>
-                    <p>Email: snacksizzle.co.za</p>
-                    <p>Phone: +27 84 053 1834</p>
-                    <p>Address: Corner of Miriam Makeba and Helen Joseph (formerly Newtown |, Helen Joseph St, Johannesburg</p>
-                </div>
-                
+                <div class="border-t border-gray-300 pt-4"><p class="text-sm">© 2025 Snack Sizzle. All rights reserved.</p></div>
             </div>
-            <div class="border-t border-gray-300 pt-4"><p class="text-sm">© 2025 Snack Sizzle. All rights reserved.</p></div>
         </section>
-        </div>
-    
     </footer>
 
     <!-- Floating Cart Button (Mobile) -->
@@ -291,17 +171,6 @@
             link.addEventListener('click', () => {
                 document.getElementById('mobile-menu').classList.add('hidden');
             });
-        });
-
-        // Swiper carousel
-        new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            pagination: { el: '.swiper-pagination', clickable: true },
-            breakpoints: {
-                640: { slidesPerView: 2 },
-                768: { slidesPerView: 4 }
-            }
         });
     </script>
 </body>
